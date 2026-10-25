@@ -1,0 +1,301 @@
+:root {
+  --sage: #829783;
+  --sage-dark: #526957;
+  --sage-light: #e9eee8;
+  --paper: #fbfaf7;
+  --ink: #292e29;
+  --muted: #777d75;
+  --line: #e6e8e1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "DM Sans", sans-serif;
+  line-height: 1.7;
+}
+
+h1, h2, h3, .serif {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+}
+
+/* COVER OVERLAY / SPLASH SCREEN */
+.cover-overlay {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(rgba(41,46,41,0.7), rgba(41,46,41,0.7)), url('https://picsum.photos/1200/800?random=10') center/cover no-repeat;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+.cover-overlay.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.guest-name-badge {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  color: #fff;
+  padding: 0.6rem 1.5rem;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  display: inline-block;
+  font-size: 1.1rem;
+}
+
+/* MUSIC TOGGLE BUTTON */
+.music-toggle {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 999;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--sage-dark);
+  color: #fff;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+/* NAVBAR */
+.navbar {
+  background: rgba(251, 250, 247, 0.94);
+  backdrop-filter: blur(12px);
+}
+
+.navbar-brand {
+  font-family: "Playfair Display", serif;
+  letter-spacing: .06em;
+  color: var(--sage-dark);
+}
+
+.nav-link {
+  color: var(--muted);
+  font-size: .88rem;
+}
+
+.nav-link:hover {
+  color: var(--sage-dark);
+}
+
+.eyebrow {
+  color: var(--sage-dark);
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  font-size: .7rem;
+  font-weight: 700;
+}
+
+/* HERO SECTION */
+.hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  padding: 7rem 0 5rem;
+}
+
+.hero h1 {
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  line-height: .98;
+}
+
+.hero h1 span {
+  color: var(--sage);
+  font-style: italic;
+}
+
+/* COUNTDOWN TIMER */
+.countdown-wrap {
+  display: flex;
+  gap: 1rem;
+}
+
+.countdown-box {
+  background: #fff;
+  border: 1px solid var(--line);
+  padding: 0.6rem 1rem;
+  border-radius: 4px;
+  text-align: center;
+  min-width: 65px;
+}
+
+.countdown-box .number {
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  color: var(--sage-dark);
+}
+
+.countdown-box .label {
+  font-size: 0.7rem;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+/* PHOTO FRAME */
+.hero-visual {
+  min-height: 400px;
+  position: relative;
+}
+
+.photo-frame {
+  position: absolute;
+  inset: 1rem;
+  background: linear-gradient(145deg, #dce4d9, #a9bba8 55%, #748b78);
+  border-radius: 48% 48% 3px 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo-placeholder {
+  color: #fff;
+  text-align: center;
+}
+
+/* SECTIONS */
+.section {
+  padding: 5rem 0;
+}
+
+.section-heading {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+}
+
+.intro-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  padding: clamp(2rem, 4vw, 3.5rem);
+}
+
+.quote-mark {
+  color: var(--sage);
+  font-family: "Playfair Display", serif;
+  font-size: 4rem;
+  line-height: .7;
+}
+
+.person-card {
+  padding: 2rem 1rem;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.person-name {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+}
+
+.ampersand {
+  font-family: "Playfair Display", serif;
+  color: var(--sage);
+  font-size: 3.5rem;
+  font-style: italic;
+}
+
+.event-card {
+  height: 100%;
+  background: #fff;
+  border: 1px solid var(--line);
+  padding: 2.2rem;
+}
+
+.event-number {
+  font-family: "Playfair Display", serif;
+  color: var(--sage);
+  font-size: 2.5rem;
+}
+
+/* BUTTONS */
+.btn-sage {
+  background: var(--sage-dark);
+  color: #fff;
+  border: 1px solid var(--sage-dark);
+  padding: .7rem 1.3rem;
+  border-radius: 2px;
+}
+
+.btn-sage:hover {
+  background: #3f5444;
+  color: #fff;
+}
+
+.btn-outline-sage {
+  border: 1px solid var(--sage);
+  color: var(--sage-dark);
+  border-radius: 2px;
+  padding: .65rem 1.1rem;
+}
+
+.btn-outline-sage:hover {
+  background: var(--sage-light);
+  color: var(--sage-dark);
+}
+
+/* GALERI */
+.gallery-item {
+  overflow: hidden;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+/* RSVP & WISHES */
+.rsvp-wrap {
+  background: var(--sage-light);
+  padding: clamp(2rem, 5vw, 4rem);
+}
+
+.wishes-container {
+  max-height: 300px;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+}
+
+.wish-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  padding: 0.8rem 1rem;
+  border-radius: 4px;
+  margin-bottom: 0.8rem;
+}
+
+.footer {
+  padding: 3rem 0;
+  border-top: 1px solid var(--line);
+  text-align: center;
+}
+
+.small-muted {
+  color: var(--muted);
+  font-size: .9rem;
+}

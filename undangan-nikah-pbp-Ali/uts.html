@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Undangan Pernikahan | LANCE & ODETTE</title>
+  
+  // FONTS GOOGLE
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+  // Bootstrap CSS
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+ // FILE CSS EKSTERNAL
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Musik Latar (Ganti URL audio dengan lagu Anda) -->
+  <audio id="bgMusic" loop>
+    <source src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Tombol Musik -->
+  <button id="musicToggle" class="music-toggle" aria-label="Toggle Musik">
+    🔊
+  </button>
+
+  <!-- COVER SPALSH SCREEN -->
+  <div id="coverOverlay" class="cover-overlay">
+    <div class="text-center px-3">
+      <p class="eyebrow text-white-50 mb-3">The Wedding Of</p>
+      <h1 class="serif text-white display-3 mb-4">LANCE & ODETTE</h1>
+      <p class="text-white-50 mb-4">Kepada Yth. Bapak/Ibu/Saudara/i:</p>
+      <div class="guest-name-badge mb-4" id="guestNameDisplay">Tamu Undangan</div>
+      <button id="openInvitation" class="btn btn-sage btn-lg px-4 shadow">
+        💌 Buka Undangan
+      </button>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg fixed-top border-bottom">
+    <div class="container py-2">
+      <a class="navbar-brand" href="#home">LANCE &amp; ODETTE</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto gap-lg-3">
+          <li class="nav-item"><a class="nav-link" href="#kisah">Kisah Kami</a></li>
+          <li class="nav-item"><a class="nav-link" href="#acara">Detail Acara</a></li>
+          <li class="nav-item"><a class="nav-link" href="#galeri">Galeri</a></li>
+          <li class="nav-item"><a class="nav-link" href="#amplop">Amplop Digital</a></li>
+          <li class="nav-item"><a class="nav-link" href="#rsvp">RSVP</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-7 hero-copy">
+            <p class="eyebrow mb-3">Undangan Pernikahan</p>
+            <h1 class="mb-4">LANCE<br><span>&</span> ODETTE</h1>
+            <p class="hero-note mb-4">Dua hati, satu tujuan, dan sebuah perjalanan baru yang ingin kami rayakan bersama Anda.</p>
+            
+            <!-- Countdown Timer -->
+            <div class="countdown-wrap mb-4">
+              <div class="countdown-box"><div id="cdDays" class="number">00</div><div class="label">Hari</div></div>
+              <div class="countdown-box"><div id="cdHours" class="number">00</div><div class="label">Jam</div></div>
+              <div class="countdown-box"><div id="cdMins" class="number">00</div><div class="label">Menit</div></div>
+              <div class="countdown-box"><div id="cdSecs" class="number">00</div><div class="label">Detik</div></div>
+            </div>
+
+            <p class="fw-semibold mb-4">Minggu, 20 Desember 2026 <span class="text-secondary fw-normal">· 10.00 WIB</span></p>
+            <a href="#acara" class="btn btn-sage me-2 mb-2">Lihat Acara</a>
+            <a href="#rsvp" class="btn btn-outline-sage mb-2">Konfirmasi Kehadiran</a>
+          </div>
+          <div class="col-lg-5">
+            <div class="hero-visual">
+              <div class="photo-frame"style="background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdH019d3brKOOJHxRY-RLT-hqN2ROu5w2yuualN0F5EQ&s=10') center/cover no-repeat;">
+                <div class="photo-placeholder">
+                  <div class="serif fs-1">A little<br>more love</div>
+                  <p class="small mt-2 mb-0">Foto Prewedding</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION KISAH -->
+    <section class="section" id="kisah">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-9">
+            <div class="intro-card text-center">
+              <div class="quote-mark mb-2">“</div>
+              <p class="serif fs-3 mb-4">Dan di antara tanda-tanda (kebesaran-Nya) ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya.</p>
+              <p class="small-muted mb-0">Dengan memohon rahmat dan ridho Tuhan Yang Maha Esa, kami bermaksud mengundang Anda untuk hadir pada hari bahagia kami.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row align-items-center text-center mt-5 g-4">
+          <div class="col-md-5">
+            <div class="person-card">
+              <p class="eyebrow mb-2">Mempelai Pria</p>
+              <h2 class="person-name mb-2">LANCE, J.H.</h2>
+              <p class="small-muted mb-0">Putra dari Bapak ALUCARD &amp; Ibu LAYLA</p>
+            </div>
+          </div>
+          <div class="col-md-2"><div class="ampersand">&amp;</div></div>
+          <div class="col-md-5">
+            <div class="person-card">
+              <p class="eyebrow mb-2">Mempelai Wanita</p>
+              <h2 class="person-name mb-2">ODETTE, M.H.</h2>
+              <p class="small-muted mb-0">Putri dari Bapak TIGREAL &amp; Ibu RAFAELA</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION ACARA -->
+    <section class="section pt-0" id="acara">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+  <div class="col-lg-8 text-center">
+    <p class="eyebrow mb-2">Save the date</p>
+    <h2 class="section-heading mb-3">Hari Istimewa</h2>
+    <p class="small-muted mx-auto" style="max-width: 500px;">Kehadiran dan doa restu Anda adalah kebahagiaan bagi kami.</p>
+  </div>
+</div>
+        </div>
+        <div class="row g-4 justify-content-center">
+          <div class="col-lg-5 col-md-6">
+            <article class="event-card">
+              <span class="event-number">01</span>
+              <h3 class="mt-2 mb-3">Akad Nikah</h3>
+              <p class="small-muted mb-1">Minggu, 20 Desember 2026</p>
+              <p class="mb-3">08.00 – 09.00 WIB</p>
+              <p class="fw-semibold mb-1">Masjid Agung Surabaya</p>
+              <p class="small-muted mb-4">Jl. Masjid Agung Timur No.1, Gayungan, Surabaya</p>
+              <a class="btn btn-outline-sage me-2 mb-2" href="https://maps.google.com" target="_blank">Google Maps ↗</a>
+              <button class="btn btn-sage mb-2" onclick="addToCalendar('Akad Nikah', '2026-12-20T08:00:00', 'Masjid Agung Surabaya')">📅 Simpan Kalender</button>
+            </article>
+          </div>
+          <div class="col-lg-5 col-md-6">
+            <article class="event-card">
+              <span class="event-number">02</span>
+              <h3 class="mt-2 mb-3">Resepsi</h3>
+              <p class="small-muted mb-1">Minggu, 20 Desember 2026</p>
+              <p class="mb-3">10.00 – 13.00 WIB</p>
+              <p class="fw-semibold mb-1">Gedung Grand Ballroom</p>
+              <p class="small-muted mb-4">Jl. Jend. Ahmad Yani No.88, Surabaya</p>
+              <a class="btn btn-outline-sage me-2 mb-2" href="https://maps.google.com" target="_blank">Google Maps ↗</a>
+              <button class="btn btn-sage mb-2" onclick="addToCalendar('Resepsi Nikah', '2026-12-20T10:00:00', 'Gedung Grand Ballroom')">📅 Simpan Kalender</button>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERI FOTO -->
+    <section class="section pt-0" id="galeri">
+      <div class="container text-center">
+        <p class="eyebrow mb-2">Galeri Foto</p>
+        <h2 class="section-heading mb-5">Momen Bahagia</h2>
+        <div class="row g-3">
+          <div class="col-md-4 col-6">
+            <div class="gallery-item" onclick="openLightbox('https://picsum.photos/800/1000?random=1')">
+              <img src="https://picsum.photos/400/500?random=1" alt="Prewedding 1">
+            </div>
+          </div>
+          <div class="col-md-4 col-6">
+            <div class="gallery-item" onclick="openLightbox('https://picsum.photos/800/1000?random=2')">
+              <img src="https://picsum.photos/400/500?random=2" alt="Prewedding 2">
+            </div>
+          </div>
+          <div class="col-md-4 col-12">
+            <div class="gallery-item" onclick="openLightbox('https://picsum.photos/800/1000?random=3')">
+              <img src="https://picsum.photos/400/500?random=3" alt="Prewedding 3">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AMPLOP DIGITAL -->
+    <section class="section pt-0" id="amplop">
+      <div class="container text-center">
+        <div class="intro-card mx-auto" style="max-width: 650px;">
+          <p class="eyebrow mb-2">Amplop Digital</p>
+          <h2 class="section-heading mb-3">Tanda Kasih</h2>
+          <p class="small-muted mb-4">Doa restu Anda merupakan hadiah terindah bagi kami. Namun jika Anda ingin memberi hadiah, kami menyediakan amplop digital:</p>
+
+          <div class="row g-3 justify-content-center">
+            <div class="col-md-6">
+              <div class="p-3 border rounded bg-light text-start">
+                <div class="fw-bold mb-1">Bank BCA</div>
+                <div class="text-secondary small">1234 5678 90</div>
+                <div class="small mb-2">a.n. LANCE, J.H</div>
+                <button class="btn btn-sm btn-outline-sage w-100" onclick="copyText('1234567890')">📋 Salin Rekening</button>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="p-3 border rounded bg-light text-start">
+                <div class="fw-bold mb-1">Bank Mandiri</div>
+                <div class="text-secondary small">0987 6543 21</div>
+                <div class="small mb-2">a.n. ODETTE, M.H</div>
+                <button class="btn btn-sm btn-outline-sage w-100" onclick="copyText('0987654321')">📋 Salin Rekening</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION RSVP & WISHES -->
+    <section class="section pt-0" id="rsvp">
+      <div class="container">
+        <div class="rsvp-wrap">
+          <div class="row g-5">
+            <div class="col-lg-5">
+              <p class="eyebrow mb-2">RSVP</p>
+              <h2 class="section-heading mb-4">Konfirmasi Kehadiran</h2>
+              <p class="small-muted mb-4">Mohon beri tahu kami apakah Anda bisa hadir di hari istimewa ini.</p>
+
+              <!-- Live Wishboard List -->
+              <h5 class="serif mb-3">Ucapan &amp; Doa</h5>
+              <div id="wishesContainer" class="wishes-container">
+                <!-- Data ucapan akan dimasukkan via JavaScript -->
+              </div>
+            </div>
+
+            <div class="col-lg-7">
+              <form id="rsvpForm" class="row g-3">
+                <div class="col-12">
+                  <label for="nama" class="form-label">Nama Lengkap</label>
+                  <input type="text" class="form-control" id="nama" placeholder="Tulis nama Anda" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="kehadiran" class="form-label">Konfirmasi</label>
+                  <select class="form-select" id="kehadiran" required>
+                    <option value="" selected disabled>Pilih Kehadiran</option>
+                    <option value="Hadir">Ya, Saya Akan Hadir</option>
+                    <option value="Tidak Hadir">Maaf, Belum Bisa Hadir</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label for="jumlah" class="form-label">Jumlah Tamu</label>
+                  <select class="form-select" id="jumlah">
+                    <option value="1">1 Orang</option>
+                    <option value="2">2 Orang</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label for="ucapan" class="form-label">Ucapan &amp; Doa</label>
+                  <textarea class="form-control" id="ucapan" rows="3" placeholder="Tuliskan doa terbaik Anda..."></textarea>
+                </div>
+                <div class="col-12">
+                  <button class="btn btn-sage w-100" type="submit">Kirim Konfirmasi</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="serif fs-2 mb-2">LANCE &amp; ODETTE</div>
+      <p class="small-muted mb-0">Dibuat dengan cinta · 20.12.2026</p>
+    </div>
+  </footer>
+
+  //<!-- Lightbox Modal Foto -->
+  <div class="modal fade" id="lightboxModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content bg-transparent border-0">
+        <div class="modal-body text-center p-0">
+          <img id="lightboxImg" src="" class="img-fluid rounded shadow" alt="Lightbox">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification (Popup Salin Rekening) -->
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="copyToast" class="toast align-items-center text-bg-dark border-0" role="alert">
+      <div class="d-flex">
+        <div class="toast-body">Nomor rekening berhasil disalin!</div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- File JS Eksternal -->
+  <script src="script.js"></script>
+</body>
+</html>
